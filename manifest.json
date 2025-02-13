@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Etsy店铺数据采集",
+  "version": "1.0",
+  "description": "采集Etsy店铺数据的Chrome插件",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.ehunt.ai/*",
+    "*://ehunt.ai/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ehunt.ai/*",
+        "*://ehunt.ai/*"
+      ],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+} 

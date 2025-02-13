@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .mode-select {
+      margin: 10px 0;
+    }
+    .status {
+      margin: 10px 0;
+      color: #666;
+    }
+    button {
+      padding: 8px;
+      background: #f1651f;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Etsy店铺数据采集</h3>
+    
+    <div class="mode-select">
+      <input type="radio" name="mode" value="current" checked> 仅当前页
+      <input type="radio" name="mode" value="multi"> 多页采集
+      <div id="pageCount" style="display: none;">
+        页数：<input type="number" min="1" max="10" value="1">
+      </div>
+    </div>
+
+    <button id="startBtn">开始采集</button>
+    <button id="exportBtn" disabled>导出CSV</button>
+
+    <div class="status">
+      状态：<span id="status">未开始</span><br>
+      已采集：<span id="count">0</span> 个店铺
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

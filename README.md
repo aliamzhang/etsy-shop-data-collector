@@ -1,2 +1,42 @@
-# etsy-shop-data-collector
-Chrome extension for collecting Etsy shop data from ehunt.ai
+# Etsy店铺数据采集插件
+
+一个用于从 ehunt.ai 采集 Etsy 店铺数据的 Chrome 插件。
+
+## 功能特点
+
+- 支持单页数据采集
+- 支持多页数据采集（最多10页）
+- 数据导出为 CSV 格式
+- 支持采集以下数据：
+  - 店铺名称
+  - 总销量
+  - 7日销量
+  - 总评价数
+  - 7日评价数
+  - 在售商品数
+  - 开店时间
+
+## 使用方法
+
+1. 克隆仓库到本地
+2. 打开 Chrome 浏览器，进入扩展程序页面 (chrome://extensions/)
+3. 开启"开发者模式"
+4. 点击"加载已解压的扩展程序"，选择插件目录
+5. 访问 ehunt.ai，在搜索结果页面点击插件图标使用
+
+## 文件结构
+
+- `manifest.json`: 插件配置文件
+- `popup.html`: 插件弹窗界面
+- `popup.js`: 弹窗交互逻辑
+- `content.js`: 数据采集核心逻辑
+
+## 注意事项
+
+- 使用前请确保已登录 ehunt.ai
+- 建议在网络状态良好时使用
+- 如需采集多页数据，建议每次不超过3页
+
+## License
+
+MIT 
